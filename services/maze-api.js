@@ -4,7 +4,7 @@ const fetchMaze = (options) => {
 
   const optionEntries = Object.entries(options);
 
-  if (optionEntries) {
+  if(optionEntries) {
     url += '?';
     optionEntries.forEach(entry => {
       url += `${entry[0]}=${entry[1]}&`;

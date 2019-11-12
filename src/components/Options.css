@@ -1,0 +1,27 @@
+.Options {
+  width: 70vw;
+  margin: auto;
+
+  div {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    label {
+      text-align: right;
+    }
+    
+    select, label, input, button  {
+      margin: 3px;
+    }
+    
+    button {
+      grid-column: col 1 / span col 2;
+      width: 65vw;
+      max-width: 450px;
+      padding: 10px;
+    }
+
+  }
+}

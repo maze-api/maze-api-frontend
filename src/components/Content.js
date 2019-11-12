@@ -3,6 +3,7 @@ import GetContent from './GetContent';
 import PostContent from './PostContent';
 import AuthContent from './AuthContent';
 import NavBar from './NavBar';
+import ExampleContent from '../containers/ExampleContent';
 
 
 
@@ -56,6 +57,7 @@ export default class Content extends Component {
         {this.state.get && <GetContent />}
         {this.state.post && <PostContent />}
         {this.state.auth && <AuthContent />}
+        {this.state.example && <ExampleContent />}
       </>
     );
   }
