@@ -7,7 +7,7 @@ const GetContent = () => {
     <table className={styles.Content}>
       <tbody>
         <tr>
-          <th>GET Maze Queries</th>
+          <th>GET Queries</th>
           <th>Explanation</th>
         </tr>
         <tr>
@@ -22,7 +22,7 @@ const GetContent = () => {
           <td>GET /api/mazes/?width=20&height=20</td>
           <td>
             <p>
-                            Get random mazes that are 20x20 cells.
+              Get random mazes that are 20x20 cells.
               <br />
               <br />Alternate queries:
               <br />
@@ -39,7 +39,7 @@ const GetContent = () => {
           <td>GET /api/mazes/?algorithm=Prims</td>
           <td>
             <p>
-                            Get random mazes generated using the Prims algorithm.
+              Get random mazes generated using the Prims algorithm.
               <br />
               <br />Available algorithms:
               <br />

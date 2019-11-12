@@ -7,9 +7,9 @@ const NavBar = ({ handleClick }) => {
   const style = {
     'width': '85vw',
     'margin': 'auto',
-    'borderTop': '4px solid black',
-    'borderLeft': '4px solid black',
-    'borderRight': '4px solid black',
+    'borderTop': '4px dashed black',
+    'borderLeft': '4px dashed black',
+    'borderRight': '4px dashed black',
   };
 
   const buttonStyle = {
@@ -19,7 +19,9 @@ const NavBar = ({ handleClick }) => {
     'fontSize': '1.5em',
     'padding': '10px',
     'backgroundColor': 'white',
-    'fontWeight': '600'
+    'fontWeight': '600',
+    'border': 'none',
+    'outline': 'none'
   };
 
 

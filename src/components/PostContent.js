@@ -24,7 +24,7 @@ const PostContent = () => {
           <td>
             <pre>
 
-                            body: &#123;
+              &#123;
               <br />  algorithm: Growing Tree,
               <br />  dimensions: &#123;
               <br />    width: 20,
@@ -36,8 +36,15 @@ const PostContent = () => {
               <br />&#125;
             </pre>
           </td>
-          <td>Generates and posts a unique maze to Maze API database with the provided attributes. Note that these attributes are the only ones that can be specified in POST /api/mazes.</td>
-
+          <td>Generates and posts a unique maze to Maze API database with the provided attributes.
+            These attributes are the only ones that can be specified in POST /api/mazes.
+          <br />
+          <br /> Notes:
+          <br />
+          <br /> dimensions is an object containing height and width properties.
+          <br />
+          <br /> startX and startY are the x,y coordinates for the start of the maze. The end of the maze is chosen randomly from the cells on the right wall.
+          </td>
         </tr>
       </tbody>
     </table>
