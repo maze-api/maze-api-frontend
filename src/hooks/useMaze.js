@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
-import fetchMaze from '../../services/maze-api.js';
+import { getMaze } from '../services/maze-api';
 
 const useMaze = (options) => {
   const [maze, setMaze] = useState();
+  
   useEffect(() => {
-    fetchMaze(options)
-      .then(maze => {
-        setMaze(maze);
-      });
+    getMaze(options)
+      .then(maze => setMaze(maze));
   }, [options]);
 
   return maze;
