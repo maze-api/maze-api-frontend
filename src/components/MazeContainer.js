@@ -13,12 +13,9 @@ let options = {
 const MazeContainer = () => {
   const maze = useMaze(options);
 
-  const style = {
-  };
-
 
   return (
-    <div style={style}>
+    <div>
       {maze && <MazeVisualizer maze={maze} />}
     </div>
   );

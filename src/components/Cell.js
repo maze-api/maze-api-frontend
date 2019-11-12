@@ -4,8 +4,8 @@ const Cell = ({ coords, id, exits, solutionPath }) => {
 
   let style = {
 
-    'minHeight': `${100 / 60}vw`,
-    'minWidth': `${100 / 60}vw`,
+    'minHeight': `${98.9 / 60}vw`,
+    'minWidth': `${98.9 / 60}vw`,
     'backgroundColor': 'white',
     'border': '5px solid black',
     'boxSizing': 'border-box'
@@ -32,6 +32,14 @@ const Cell = ({ coords, id, exits, solutionPath }) => {
   if(solutionPath === true) {
     borders['backgroundColor'] = 'green';
   }
+  if(solutionPath === 'start') {
+    borders['backgroundColor'] = 'goldenrod';
+  }
+  if(solutionPath === 'end') {
+    borders['backgroundColor'] = 'goldenrod';
+  }
+
+
 
 
   return (

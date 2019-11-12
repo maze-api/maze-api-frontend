@@ -2,18 +2,28 @@ import React from 'react';
 import MazeContainer from './MazeContainer';
 
 const Header = () => {
-  const style = {
+  const headerStyle = {
     'display': 'flex',
     'flexDirection': 'column',
-    'textAlign': 'center',
+    'alignItems': 'center',
+  };
+
+  const textStyle = {
+    'margin': '50px 0',
+    'backgroundColor': 'white',
+    'width': 'max-content',
+    'padding': '15px',
+    'border': '5px solid black'
   };
 
 
   return (
-    <header style={style}>
+    <header style={headerStyle}>
       <MazeContainer />
-      <h1> Maze API</h1>
-    </header>
+      <div style={textStyle}>
+        <h1> Maze API</h1>
+      </div>
+    </header >
   );
 
 };

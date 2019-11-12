@@ -13,20 +13,31 @@ const MazeVisualizer = ({ maze }) => {
   const mazeHeight = maze[0].dimensions.height;
 
   let columns = [];
-  for (let r = 0; r < mazeWidth; r++) {
+  for(let r = 0; r < mazeWidth; r++) {
     let cells = [];
     columns.push([]);
 
-    for (let c = 0; c < mazeHeight; c++) {
+    for(let c = 0; c < mazeHeight; c++) {
       let cell = maze[0].cellMap[c + (r * mazeHeight)];
 
       let foundCell = findCellByCoords(maze[0].solutionPath, cell.coordinates.x, cell.coordinates.y);
       let newCell = null;
-      if (foundCell) {
+      if(foundCell) {
         newCell = cell;
         newCell.solutionPath = true;
+
+        if(maze[0].solutionPath.indexOf(foundCell) === 0) {
+          console.log('START');
+          newCell.solutionPath = 'start';
+        }
+
+        if(maze[0].solutionPath.indexOf(foundCell) === maze[0].solutionPath.length - 1) {
+          console.log('END');
+          newCell.solutionPath = 'end';
+        }
+
       }
-      if (newCell) {
+      if(newCell) {
         cells.push(newCell);
       } else {
         cells.push(cell);
@@ -42,10 +53,7 @@ const MazeVisualizer = ({ maze }) => {
   let style = {
     'display': 'flex',
     'flexDirection': 'row',
-
   };
-
-
 
   return (
     <>
