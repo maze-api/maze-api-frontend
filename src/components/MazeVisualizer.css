@@ -1,0 +1,4 @@
+.MazeVisualizer {
+    display:flex;
+    flex-direction:row;
+}

@@ -1,0 +1,32 @@
+.MazeDisplay {
+
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  dd {
+    margin: 5px;
+  }
+
+  pre {
+    font: normal;
+    line-height: 1.1;
+  }
+
+  pre[name="json"] {
+    margin: auto;
+    max-width: 80vw;
+    max-height: 70vh;
+    overflow: scroll;
+    text-align: left;
+    background-color: #CCCCCC;
+    border: 1px black;
+  }
+
+}
