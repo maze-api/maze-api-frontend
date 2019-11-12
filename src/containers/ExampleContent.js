@@ -5,7 +5,18 @@ import MazeDisplay from '../components/MazeDisplay';
 import styles from './ExampleContent.css';
 
 export default function ExampleContent() {
-  const { data, apiKey, maze, size, cellShape, algorithm, handleChange, handleSubmit, handleToggleSolution } = useExampleContent();
+  const { 
+    data, 
+    apiKey, 
+    maze, 
+    size, 
+    cellShape, 
+    algorithm, 
+    handleChange, 
+    handleSubmit, 
+    handleToggleSolution,
+    displayString,
+  } = useExampleContent();
   
   return (
     <div className={styles.ExampleContent}>
@@ -21,6 +32,7 @@ export default function ExampleContent() {
         <MazeDisplay  
           maze={maze}
           handleToggleSolution={handleToggleSolution}
+          displayString={displayString}
         />
       }
     </div>
