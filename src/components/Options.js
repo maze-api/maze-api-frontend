@@ -6,10 +6,6 @@ export default function Options({ size, cellShape, algorithm, handleSubmit, hand
   return (
     <form className={styles.Options} onSubmit={handleSubmit}>
       <div>
-        <label>API Key: </label>
-        <input name="apiKey" type="password" onChange={handleChange}></input>
-      </div>
-      <div>
         <label>Size: </label>
         <select name="size" value={size} onChange={handleChange}>
           <option name="size" value="any">Any Size</option>

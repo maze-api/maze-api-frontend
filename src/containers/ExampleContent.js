@@ -6,7 +6,17 @@ import styles from './ExampleContent.css';
 import tableStyles from '../components/Content.css';
 
 export default function ExampleContent() {
-  const { data, apiKey, maze, size, cellShape, algorithm, handleChange, handleSubmit, handleToggleSolution } = useExampleContent();
+  const { 
+    data, 
+    maze, 
+    size, 
+    cellShape, 
+    algorithm, 
+    handleChange, 
+    handleSubmit, 
+    handleToggleSolution,
+    displayString,
+  } = useExampleContent();
 
   return (
     <table className={tableStyles.Content}>
@@ -18,7 +28,6 @@ export default function ExampleContent() {
           <td>
             <div className={styles.ExampleContent}>
               <Options
-                apiKey={apiKey}
                 size={size}
                 cellShape={cellShape}
                 algorithm={algorithm}
@@ -29,12 +38,13 @@ export default function ExampleContent() {
                 <MazeDisplay
                   maze={maze}
                   handleToggleSolution={handleToggleSolution}
+                  displayString={displayString}
                 />
               }
             </div>
           </td>
         </tr>
       </tbody>
-    </table>
+    </table>  
   );
 }
