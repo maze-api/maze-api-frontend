@@ -6,7 +6,6 @@ export function useExampleContent() {
   const [cellShape, setCellShape] = useState('any');
   const [algorithm, setAlgorithm] = useState('any');
   const [submittedMazeOptions, setSubmittedMazeOptions] = useState({ freshPageLoad: true });
-  const [apiKey, setApiKey] = useState('');
   const [data, setData] = useState(false);
   const [maze, setMaze] = useState({});
   const [showSolution, setShowSolution] = useState(false);
@@ -18,7 +17,6 @@ export function useExampleContent() {
     size: setSize,
     cellShape: setCellShape,
     algorithm: setAlgorithm,
-    apiKey: setApiKey,
   };
   const handleChange = ({ target }) => {
     if(target.value === 'Hexagonal' && algorithm === 'Woven') return () => null;
@@ -41,7 +39,7 @@ export function useExampleContent() {
   useEffect(() => {
     if(submittedMazeOptions.freshPageLoad) return;
 
-    getMaze(submittedMazeOptions, apiKey)
+    getMaze(submittedMazeOptions)
       .then((mazes) => {
         const noSolutionStr = formatDisplayString(mazes[0].displayString);
         setDisplayString(noSolutionStr);
