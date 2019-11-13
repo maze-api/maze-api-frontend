@@ -14,13 +14,21 @@
     margin: 5px;
   }
 
-  pre {
-    font: normal;
-    line-height: 1.1;
-  }
+  
+  div {
+    display: flex;
+    justify-content: center;
 
+    pre {
+      font: normal;
+      line-height: 1.1;
+      text-align: left;
+    }
+  }
+  
   pre[name="json"] {
     margin: auto;
+    line-height: 1;
     max-width: 80vw;
     max-height: 70vh;
     overflow: scroll;
