@@ -6,11 +6,6 @@ export function getMaze(options) {
     .map(([key, value]) => `${key}=${value}`)
     .join('&');
 
-  return fetch(`${url}/?${queryString}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': '5da8e374122c300017d3e097'
-    }
-  })
+  return fetch(`${url}/?${queryString}`)
     .then(res => res.json());
 }
