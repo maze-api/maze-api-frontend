@@ -6,6 +6,7 @@ const Header = () => {
     'display': 'flex',
     'flexDirection': 'column',
     'alignItems': 'center',
+    'marginBottom': '20px '
   };
 
   const textStyle = {
