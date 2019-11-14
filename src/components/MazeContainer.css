@@ -1,0 +1,8 @@
+.Span {
+  color: rgba(0, 128, 0, 0.5);
+  display: block;
+  text-align: right;
+  width: 98vw;
+  position: fixed;
+  font-family: Poppins;
+}
