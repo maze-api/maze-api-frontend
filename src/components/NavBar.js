@@ -21,7 +21,8 @@ const NavBar = ({ handleClick }) => {
     'backgroundColor': 'white',
     'fontWeight': '600',
     'border': 'none',
-    'outline': 'none'
+    'outline': 'none',
+    'cursor': 'pointer',
   };
 
 
