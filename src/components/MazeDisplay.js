@@ -18,7 +18,9 @@ export default function MazeDisplay({ maze, handleToggleSolution, displayString 
       </dl>
       <h3>Maze Visualizer (ASCII pre-formatted string)</h3>
       <button onClick={handleToggleSolution}>Toggle Solution Path On/Off</button>
-      <pre>{displayString}</pre>
+      <div>
+        <pre>{displayString}</pre>
+      </div>
       <h3>Maze object structure (JSON data)</h3>
       <pre name="json">{JSON.stringify(maze, undefined, 2)}</pre>
     </section>
