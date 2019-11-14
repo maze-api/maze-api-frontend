@@ -29,10 +29,10 @@ const NavBar = ({ handleClick }) => {
 
   return (
     <div style={style}>
+      <button style={buttonStyle} onClick={handleClick} id="example" name="example">EXAMPLE</button>
       <button style={buttonStyle} onClick={handleClick} id="get" name="get">GET</button>
       <button style={buttonStyle} onClick={handleClick} id="post" name="post">POST</button>
       <button style={buttonStyle} onClick={handleClick} id="auth" name="auth">AUTH</button>
-      <button style={buttonStyle} onClick={handleClick} id="example" name="example">EXAMPLE</button>
     </div>
   );
 

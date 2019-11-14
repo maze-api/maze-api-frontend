@@ -25,13 +25,21 @@ const GetContent = () => {
               Get random mazes that are 20x20 cells.
               <br />
               <br />Alternate queries:
-              <br />
-              <br />width_lt / height_lt (less than)
-              <br />width_gt / height_gt (greater than)
-              <br />width_lte / height_lte (less than or equal to)
-              <br />width_gte / height_gte (greater than or equal to)
-              <br />
-              <br />Default is 10x10.
+              <ul>
+                <li>
+                  width_lt / height_lt (less than)
+                </li>
+                <li>
+                  width_gt / height_gt (greater than)
+                </li>
+                <li>
+                  width_lte / height_lte (less than or equal to)
+                </li>
+                <li>
+                  width_gte / height_gte (greater than or equal to)
+                </li>
+              </ul>
+              Default is 10x10.
             </p>
           </td>
         </tr>
@@ -42,13 +50,21 @@ const GetContent = () => {
               Get random mazes generated using the Prims algorithm.
               <br />
               <br />Available algorithms:
-              <br />
-              <br />Prims
-              <br />Recursive Backtracker
-              <br />Growing Tree
-              <br />Woven
-              <br />
-              <br />Default algorithm is Recursive Backtracker
+              <ul>
+                <li>
+                  Prims
+                </li>
+                <li>
+                  Recursive Backtracker
+                </li>
+                <li>
+                  Growing Tree
+                </li>
+                <li>
+                  Woven
+                </li>
+              </ul>
+              Default algorithm is Recursive Backtracker
             </p>
           </td>
         </tr>
@@ -78,26 +94,42 @@ const GetContent = () => {
             <br />Connectivity is measure of the ease of travelling between any two given cells, calculated as an inverse of the average path length, normalized to the number of cells in the maze.
             <br />
             <br />Alternate queries:
-            <br />
-            <br />connectivity_gt (greater than)
-            <br />connectivity_lt (less than)
-            <br />connectivity_gte (greater than or equal to)
-            <br />connectivity_lte (less than or equal to)
-            <br />
-            <br />Connectivity is mainly distributed between 0.1 and 0.5</td>
+            <ul>
+              <li>
+                connectivity_gt (greater than)
+              </li>
+              <li>
+                connectivity_lt (less than)
+              </li>
+              <li>
+                connectivity_gte (greater than or equal to)
+              </li>
+              <li>
+                connectivity_lte (less than or equal to)
+              </li>
+            </ul>
+            Connectivity is mainly distributed between 0.1 and 0.5</td>
         </tr>
         <tr>
           <td>GET /api/mazes/?averagePathLength=20</td>
           <td>Get random mazes with average path lengths of 20.
             <br />
             <br />Alternate queries:
-            <br />
-            <br />averagePathLength_gt (greater than)
-            <br />averagePathLength_lt (less than)
-            <br />averagePathLength_gte (greater than or equal to)
-            <br />averagePathLength_lte (less than or equal to)
-            <br />
-            <br />Note that averagePathLength scores are often not whole numbers. Using the alternate queries are recommended.
+            <ul>
+              <li>
+                averagePathLength_gt (greater than)
+              </li>
+              <li>
+                averagePathLength_lt (less than)
+              </li>
+              <li>
+                averagePathLength_gte (greater than or equal to)
+              </li>
+              <li>
+                averagePathLength_lte (less than or equal to)
+              </li>
+            </ul>
+            Note that averagePathLength scores are often not whole numbers. Using the alternate queries are recommended.
           </td>
         </tr>
         <tr>
@@ -105,11 +137,21 @@ const GetContent = () => {
           <td>Get random mazes with a solution path of 20 cells.
             <br />
             <br />Alternate queries:
-            <br />
-            <br />solutionLength_gt (greater than)
-            <br />solutionLength_lt (less than)
-            <br />solutionLength_gte (greater than or equal to)
-            <br />solutionLength_lte (less than or equal to)</td>
+            <ul>
+              <li>
+                solutionLength_gt (greater than)
+              </li>
+              <li>
+                solutionLength_lt (less than)
+              </li>
+              <li>
+                solutionLength_gte (greater than or equal to)
+              </li>
+              <li>
+                solutionLength_lte (less than or equal to)
+              </li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <td>GET /api/mazes/id</td>

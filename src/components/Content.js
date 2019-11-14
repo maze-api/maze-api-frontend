@@ -9,14 +9,15 @@ import ExampleContent from '../containers/ExampleContent';
 
 export default class Content extends Component {
   state = {
-    get: true,
+    get: false,
     post: false,
     auth: false,
-    example: false
+    example: true
   };
 
   componentDidMount() {
-    document.getElementById('get').style.backgroundColor = 'goldenrod';
+    document.getElementById('example').style.backgroundColor = 'goldenrod';
+    document.getElementById('example').style.color = 'white';
 
   }
 
@@ -33,7 +34,7 @@ export default class Content extends Component {
 
 
     Object.keys(this.state).forEach(key => {
-      if(key === target.name) {
+      if (key === target.name) {
         document.getElementById(target.name).style.backgroundColor = 'goldenrod';
         document.getElementById(target.name).style.color = 'white';
 
@@ -54,10 +55,10 @@ export default class Content extends Component {
     return (
       <>
         <NavBar handleClick={this.handleClick} state={this.state} />
+        {this.state.example && <ExampleContent />}
         {this.state.get && <GetContent />}
         {this.state.post && <PostContent />}
         {this.state.auth && <AuthContent />}
-        {this.state.example && <ExampleContent />}
       </>
     );
   }
