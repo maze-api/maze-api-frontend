@@ -56,14 +56,18 @@ const GetContent = () => {
           <td>GET /api/mazes/?cellShape=Square</td>
           <td>
             <p>
-              <br />Get random mazes with square shaped cells.
+              Get random mazes with square shaped cells.
               <br />
               <br />Available cellShapes:
-              <br />
-              <br />Square
-              <br />Hexagonal (note: Hexagonal cells are not compatible with the Woven maze algorithm)
-              <br />
-              <br />Default cellShape is Square
+              <ul>
+                <li>
+                  Square
+                </li>
+                <li>
+                  Hexagonal (note: Hexagonal cells are not compatible with the Woven maze algorithm)
+                </li>
+              </ul>
+              Default cellShape is Square
             </p>
           </td>
         </tr>

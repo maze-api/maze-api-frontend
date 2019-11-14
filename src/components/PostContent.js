@@ -40,10 +40,14 @@ const PostContent = () => {
             These attributes are the only ones that can be specified in POST /api/mazes.
           <br />
           <br /> Notes:
-          <br />
-          <br /> dimensions is an object containing height and width properties.
-          <br />
-          <br /> startX and startY are the x,y coordinates for the start of the maze. The end of the maze is chosen randomly from the cells on the right wall.
+          <ul>
+            <li>
+                dimensions is an object containing height and width properties.
+            </li>
+            <li>
+                startX and startY are the x,y coordinates for the start of the maze. The end of the maze is chosen randomly from the cells on the right wall.
+            </li>
+          </ul>
           </td>
         </tr>
       </tbody>

@@ -12,34 +12,26 @@ const AuthContent = () => {
         </tr>
         <tr>
           <td>
-                        POST /api/auth/signup
+            POST /api/auth/signup
           </td>
           <td>
-                        Used to create an account and receive a key
-          </td>
-        </tr>
-        <tr>
-          <td>
-                        POST /api/auth/signin
-          </td>
-          <td>
-                        Used to sign in with an existing email and password
+            Used to create an account and receive a key
           </td>
         </tr>
         <tr>
           <td>
-                        PUT /api/auth/refresh-key
+            PUT /api/auth/refresh-key
           </td>
           <td>
-                        Used to obtain a new API key
+            Used to obtain a new API key
           </td>
         </tr>
         <tr>
           <td>
-                        DELETE /api/auth
+            DELETE /api/auth
           </td>
           <td>
-                        Used to delete one&apos;s account
+            Used to delete one&apos;s account
           </td>
         </tr>
       </tbody>
