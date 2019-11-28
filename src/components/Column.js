@@ -10,7 +10,7 @@ const Column = ({ r, cells }) => {
 
   const mappedCells = cells.map(cell => {
     return (
-      <Cell coords={`${cell.coordinates.x},${cell.coordinates.y}`} key={cell._id} exits={cell.exits} solutionPath={cell.solutionPath} />
+      <Cell key={cell._id} exits={cell.exits} solutionPath={cell.solutionPath} />
     );
   });
 

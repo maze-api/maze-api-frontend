@@ -5,3 +5,10 @@
   width: 98vw;
   font-family: Poppins;
 }
+
+@media (max-width: 650px) {
+  .Span{
+
+    font-size: .8em;
+  }
+}

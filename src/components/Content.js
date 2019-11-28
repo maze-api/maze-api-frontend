@@ -4,7 +4,7 @@ import PostContent from './PostContent';
 import AuthContent from './AuthContent';
 import NavBar from './NavBar';
 import ExampleContent from '../containers/ExampleContent';
-
+import styles from './ContentHeader.css';
 
 
 export default class Content extends Component {
@@ -15,28 +15,16 @@ export default class Content extends Component {
     example: true
   };
 
-  componentDidMount() {
-    document.getElementById('example').style.backgroundColor = 'goldenrod';
-    document.getElementById('example').style.color = 'white';
-
-  }
-
-
   handleClick = ({ target }) => {
-    document.getElementById('get').style.backgroundColor = 'white';
-    document.getElementById('post').style.backgroundColor = 'white';
-    document.getElementById('auth').style.backgroundColor = 'white';
-    document.getElementById('example').style.backgroundColor = 'white';
-    document.getElementById('get').style.color = 'black';
-    document.getElementById('post').style.color = 'black';
-    document.getElementById('auth').style.color = 'black';
-    document.getElementById('example').style.color = 'black';
+    document.getElementById('get').classList.remove(`${styles.selected}`);
+    document.getElementById('post').classList.remove(`${styles.selected}`);
+    document.getElementById('auth').classList.remove(`${styles.selected}`);
+    document.getElementById('example').classList.remove(`${styles.selected}`);
 
 
     Object.keys(this.state).forEach(key => {
-      if (key === target.name) {
-        document.getElementById(target.name).style.backgroundColor = 'goldenrod';
-        document.getElementById(target.name).style.color = 'white';
+      if(key === target.name) {
+        document.getElementById(target.name).classList.add(`${styles.selected}`);
 
         this.setState({
           [key]: true
