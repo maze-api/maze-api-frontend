@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './ContentHeader.css';
 
-
-
 const NavBar = ({ handleClick }) => {
 
   return (
