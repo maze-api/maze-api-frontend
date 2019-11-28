@@ -20,6 +20,8 @@
         text-align:left;
         max-width: 27vw;
         overflow: hidden;
+        cursor: default;
+        user-select: none;
     }
 
     tr {
