@@ -1,0 +1,39 @@
+.Cell {
+    min-height: calc(98.9vw / 60);
+    min-width: calc(98.9vw / 60);
+    background-color: white;
+    border-width: .4vw; 
+    border-color:black;
+    border-style: solid;
+    box-sizing: border-box;
+    
+}
+
+.n {
+    border-top: none;
+}
+
+.s {
+border-bottom: none;
+}
+
+.e {
+border-right: none;
+}
+
+.w {
+border-left: none;
+}
+
+.solutionPath {
+background-color: green;
+}
+
+.start {
+background-color: goldenrod;
+}
+
+.end {
+background-color: goldenrod;
+}
+

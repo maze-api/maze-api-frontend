@@ -1,0 +1,53 @@
+.Bar {
+    width: 85vw;
+    margin: auto;
+    border-top: 4px dashed black;
+    border-left: 4px dashed black;
+    border-right: 4px dashed black;
+
+    .Button{
+
+    width: 25%;
+    height: auto;
+    font-family: Varela Round;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+
+    }
+    
+    
+.unselected {
+    
+    background-color: white;
+    color: black;
+    
+}
+
+.selected {
+    background-color: goldenrod;
+    color: white;
+}
+}
+
+
+@media (max-width: 650px){
+    .Bar{ 
+        .Button{
+            font-size: 1em;
+            padding:7px;
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .Bar{ 
+        .Button{
+            font-size: .7em;
+            padding:4px;
+        }
+    }
+}

@@ -1,27 +1,40 @@
 .Options {
   width: 70vw;
   margin: auto;
+  text-align: left;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
+  section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
+  
   div {
     max-width: 500px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    
-    label {
-      text-align: right;
+    margin: 2px;
+
+    button, select {
+      padding: 5px;
+      min-width: max-content;
+
     }
-    
-    select, label, input, button  {
-      margin: 3px;
-    }
-    
-    button {
-      grid-column: col 1 / span col 2;
-      width: 65vw;
-      max-width: 450px;
-      padding: 10px;
+
+    button{
+      margin:10px 0px;
     }
 
   }
+}
+
+@media (max-width: 400px) {
+  .Options {
+
+  select, button {
+    font-size: 3.3em;
+  }
+}
 }
