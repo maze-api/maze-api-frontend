@@ -3,39 +3,27 @@ import styles from './Cell.css';
 
 const Cell = ({ id, exits, solutionPath }) => {
 
-  let style = `${styles.Cell} `;
+  const mapToStyle = {
+    'n': `${styles.n} `,
+    's': `${styles.s} `,
+    'e': `${styles.e} `,
+    'w': `${styles.w} `,
+  };  
+  const exitStyles = Object.keys(exits).map(direction => mapToStyle[direction]);
 
-  let borders = Object.keys(exits).reduce((acc, val) => {
-    switch(val) {
-      case 'n':
-        acc += `${styles.n} `;
-        break;
-      case 's':
-        acc += `${styles.s} `;
-        break;
-      case 'e':
-        acc += `${styles.e} `;
-        break;
-      case 'w':
-        acc += `${styles.w} `;
-        break;
-    }
-    return acc;
-  }, style);
+  const solutionStyles = [];
+  if(solutionPath === true) solutionStyles.push(styles.solutionPath);
+  if(solutionPath === 'start') solutionStyles.push(styles.start);
+  if(solutionPath === 'end') solutionStyles.push(styles.end);
 
-  if(solutionPath === true) {
-    borders += `${styles.solutionPath} `;
-  }
-  if(solutionPath === 'start') {
-    borders += `${styles.start} `;
-  }
-  if(solutionPath === 'end') {
-    borders += `${styles.end} `;
-  }
-
+  const stylesString = [
+    styles.Cell, 
+    ...exitStyles, 
+    ...solutionStyles
+  ].join(' ');
 
   return (
-    <div key={id} className={borders} />
+    <div key={id} className={stylesString} />
   );
 
 };
